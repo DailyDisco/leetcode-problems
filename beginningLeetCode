@@ -1,0 +1,14 @@
+// Running Sum of 1d Array (Easy)
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+ 
+var runningSum = function(nums) {
+    let value = 0
+    let sum = nums.map(res => {
+        return value = res + value;
+    })
+    return sum;
+};
