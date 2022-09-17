@@ -23,6 +23,7 @@ var runningSum = function(nums) {
  * @return {number}
  */
 var romanToInt = function(s) {
+    
     const numerals = {
         I: 1,
         V: 5,
@@ -34,12 +35,14 @@ var romanToInt = function(s) {
     }
     
     const strLen = s.length;
+    
+    // Keep count of the Roman numerals count 
     let total = 0;
     
     // Loop through the letters
     for (let i = 0; i < strLen; i++) {
         
-        // Check if the current letter is followed by one with a higher value (indicating a deduction)
+        // Check if the letter next to the current one is higher than than the one next to the current
         if (i < strLen - 1 && numerals[s[i + 1]] > numerals[s[i]]) {
             
             // Remove the current letter's numeric value from the total
